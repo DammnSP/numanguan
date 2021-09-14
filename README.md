@@ -99,6 +99,8 @@
 
 * Mariadb
 
+<img src="https://user-images.githubusercontent.com/87697789/133231494-29b79afe-c8e4-4c51-a799-bf4d5e948d7d.png" width="30%" height="40%">
+
 ### 2.3. 프론트엔드
 
 * HTML/CSS/JS
