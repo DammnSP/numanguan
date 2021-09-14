@@ -138,16 +138,41 @@
 
 #### 3.1.1. 이미지 데이터 수집
 
-- TF-IDF는 용어빈도-역문서빈도를 의미합니다.
-- 각 향수들이 가진 리뷰를 기반으로 다른 향수들과의 유사성을 측정합니다.
-
-![ex1](images/ex1.png)
-
-- 위의 식을 구현하기 위해 `scikit-learn`의 tfidfvectorizer API를 사용하였습니다.
+- 이미지 데이터 수집은 구글을 기반으로 연예인의 이름이 저장된 엑셀파일을 불러온후 크롤링을 시행하였습니다. 
 
 ```python
-tfidf = TfidfVectorizer(analyzer='word', ngram_range=(1, 2), min_df = 1, stop_words='english')
-tfidf_matrix = tf.fit_transform(reviews['content'])
+
+# 라이브러리 불러오기
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+import urllib
+import time
+
+# 구글이미지 검색해서 해당 사진 가져오기
+driver = webdriver.Chrome()
+driver.get("https://www.google.co.kr/imghp?hl=ko&authuser=0&ogbl")
+for j in name[0:2100]:
+    elem = driver.find_element_by_name("q")
+    elem.clear()
+    elem.send_keys(j)
+    elem.send_keys(Keys.RETURN)
+
+    images = driver.find_elements_by_css_selector(".rg_i.Q4LuWd")
+
+    count = 1
+
+    for i in images[1:11]: # 1번과 2번 사진이 공통된 사진이므로, 2번 부터 실행
+        try:
+            i.click()
+            time.sleep(1)
+            img_url = driver.find_element_by_css_selector(".n3VNCb").get_attribute("src")
+            urllib.request.urlretrieve(img_url, j + str(count) + ".jpg")
+            count = count + 1
+        except:
+            pass
+    
+driver.close() # 창 닫기
 ```
 
 - 영어의 불용어(stop-words)를 제거했고, ngram_range를 1에서 2까지로 정의하였습니다.
