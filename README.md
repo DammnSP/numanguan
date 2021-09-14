@@ -105,12 +105,6 @@
 
 * HTML/CSS/JS
 
-  이미지 넣기
-
-  1. HTML 설명
-  2. CSS 설명
-  3. JS 설명
-
 ### 2.4. 배포
 
 * AWS EC2
@@ -218,83 +212,6 @@ model.add(layers.Dropout(0.5))
 # class를 13개로 정하였으므로 softmax 설정
 model.add(layers.Dense(512, activation='relu'))
 model.add(layers.Dense(13, activation='softmax'))
-```
-
-
-
-
-
-
-
-
-
-![pivot](images/p.png)
-
-- 차원축소를 위해 scikit learn의 TruncatedSVD API를 사용합니다. 차원을 12차원으로 축소시켰습니다.
-
-```python
-SVD = TruncatedSVD(n_components=12)
-SVD_matrix = SVD.fit_transform(review_pivot)
-```
-
-- 차원이 축소된 행렬로 모든  쌍에 대한 피어슨 상관계수를 계산합니다.
-
-```python
-corr = np.corrcoef(SVD_matrix)
-```
-
-- 한 향수의 값이 입력이 되면 상관점수가 0.9 이상 1 미만인 향수 10개가 추천이 됩니다.
-- 해당 향수 추천서비스에는 리뷰가 들어있는 향수에 한해서 최대 10개의 추천 향수가 저장되어 있습니다.
-
-다음은 [Basenotes.net](http://www.basenotes.net/)에서 크롤링한 데이터 예시입니다.
-
-```json
-// 향수 데이터 예시
-{
-    "pk": 26120000,
-    "model": "perfumes.perfume",
-    "fields": {
-        "name": "Ambre Canelle",
-        "launch_date": "1949-01-01",
-        "thumbnail": "http://www.basenotes.net/photos/products/st/26120000.jpg",
-        "gender": 0,
-        "top_notes": [224, 480],
-        "heart_notes": [224, 259, 510, 785],
-        "base_notes": [28, 624],
-        "seasons": [3, 4],
-        "availability": false,
-        "brand": 749,
-        "categories": [3, 6],
-        "price": 169.99
-    }
-}
-```
-
-```json
-// 노트 데이터 예시
-{
-    "pk": 1,
-    "model": "perfumes.note",
-    "fields": {
-        "name": "absinthe",
-        "kor_name": "압생트"
-    }
-}
-```
-
-```json
-// 리뷰 데이터 예시
-{
-    "pk": 1,
-    "model": "perfumes.review",
-    "fields": {
-        "content": "This is a grown-up powdery perfume.  Very feminine.  The powdery vibe changes mood as it mellows on the skin.  In the middle there is a smoky-musky, almost bitter vanilla.  Towards the \"end\" a heliotropic floral with a tangy citrus accord.  Sweet Dreams is a good name for this.  It describes it well.\n\r\nLongevity is outstanding.  Sillage is better than moderate.",
-        "rate": 7,
-        "created_at": "2017-09-02 00:00:00",
-        "user": 1,
-        "perfume": 26149998
-    }
-}
 ```
 
 ## 4. 아키텍처 상세
