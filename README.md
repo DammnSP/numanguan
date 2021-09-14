@@ -1,4 +1,4 @@
-u':victory_hand:': u'\U0000270C': 키워드와 사주팔자를 통한 데이팅 앱 프로젝트[NUMANGUAN]
+u':victory_hand:': u'\U0000270C':, 키워드와 사주팔자를 통한 데이팅 앱 프로젝트[NUMANGUAN]
 
 [NUMANGUAN 바로가기](Site 주소)
 
