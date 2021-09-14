@@ -35,7 +35,7 @@
 
 흥미로운 키워드와 사주팔자에 대한 정보를 통해 2040 누구나 사용하기에 부담스럽지 않고, 짝을 찾는 재미를 주는 앱 서비스입니다. 
 
-![메인화면](images/homepage.png)
+[앱구현 : NUMANGUAN 사이트 맨 앞부분 넣기]
 
 ### 1.1. 타겟 고객군
 
@@ -49,11 +49,13 @@
 
 1. 자신의 이미지와 관련된 키워드에 따른 상대방의 외모와 성격에 대한 정보를 알 수 있습니다.
 
-![recommedation](images/recom.png)
+[앱구현 : 결과와면 중 이미지와 키워드 관련 사진넣기]
 
 #### 1.2.2. 추천 알고리즘
 
 1. **1000개**의 영화 상세 정보를 열람할 수 있습니다.
+
+[앱구현 : 추천 알고리즘 관련 사진 넣기]
 
 ## 2. 기술 스택
 
@@ -83,34 +85,14 @@
 
 * FastAPI
 
-  ![django](images/django.png)
+  ![FastAPI](https://user-images.githubusercontent.com/87697789/133209834-80b424b2-1742-4682-b520-7758bb332237.png)
 
-  > 파이썬으로 만들어진 무료 오픈소스 웹 애플리케이션 프레임워크(web application framework)입니다.
+  > 현대적이고, 빠르며(고성능), 파이썬 표준 타입 힌트에 기초한 Python3.6+의 API를 빌드하기 위한 웹 프레임워크입니다.
 
-  1. 라우팅, 직렬화, 테스트, 관리자 페이지 등 기능 지원이 다양하고 풍부하다.
-  2. Python이다.(Python의 다양한 데이터 분석 라이브러리 사용 가능)
-
-* DRF(Django Rest Framework)
-
-  > DB의 데이터를 조회하고 유의미한 모음으로 직렬화하여, 클라이언트와 통신하는 API서버를 작성합니다.
-
-  ![drf](images/drf_logo.png)
-
-* Swagger
-
-  ![swagger](images/swagger.png)
-
-  1. 사실상 표준
-
-* JWT
-
-  > JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.
-
-  ![jwt](images/jwt.jpg)
-
-  1. JWT를 발급한 후 토큰 검증만 하면 되기 때문에 추가 저장소가 필요 없다.
-  2. 토큰 기반으로 하는 다른 인증 시스템에 접근이 가능하다.
-     * Facebook 로그인, Google 로그인 등은 모두 토큰을 기반으로 인증하기 때문에 선택적으로 이름이나 이메일 등을 받을 수 있다.
+  1. 빠름 (Starlette과 Pydantic 덕분에) NodeJS 및 Go와 대등할 정도로 매우 높은 성능 (사용가능한 가장 빠른 파이썬 프레임워크 중 하나).
+  2. 빠른 코드 작성 : 약 200%에서 300%까지 기능 개발 속도 증가
+  3. 적은 버그 : 사람(개발자)에 의한 에러 약 40% 감소
+  4. 표준 기반 : API에 대한 (완전히 호환되는) 개방형 표준기반
 
 * MySQL
 
@@ -144,7 +126,6 @@
 
 * AWS EC2
 * Docker
-* Nginx
 
 ### 2.4. 프로젝트 관리
 
@@ -153,7 +134,9 @@
 
 ## 3. 데이터 수집 및 분석 과정
 
-### 3.1. Content-based Recommendation - TF-IDF
+### 3.1. 이미지 데이터 
+
+#### 3.1.1. 이미지 데이터 수집
 
 - TF-IDF는 용어빈도-역문서빈도를 의미합니다.
 - 각 향수들이 가진 리뷰를 기반으로 다른 향수들과의 유사성을 측정합니다.
