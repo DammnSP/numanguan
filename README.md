@@ -218,7 +218,8 @@ model.add(layers.Dense(13, activation='softmax'))
 
 ## 4. 아키텍처 상세
 
-![System architecture](images/system_architecture.png)
+![아키텍처 상세](https://user-images.githubusercontent.com/87697789/133242250-fe683235-7906-481b-800e-9dd2edd0a7d6.png)
+
 
 ## 5. 레이아웃 및 디자인
 
