@@ -86,6 +86,10 @@
 * FastAPI
 
   ![FastAPI](https://user-images.githubusercontent.com/87697789/133209834-80b424b2-1742-4682-b520-7758bb332237.png)
+  
+  <FastAPI src"https://user-images.githubusercontent.com/87697789/133209834-80b424b2-1742-4682-b520-7758bb332237.png" width="200" height="400"./>
+  
+  <img src"https://user-images.githubusercontent.com/87697789/133209834-80b424b2-1742-4682-b520-7758bb332237.png" width="200" height="400"./>
 
   > 현대적이고, 빠르며(고성능), 파이썬 표준 타입 힌트에 기초한 Python3.6+의 API를 빌드하기 위한 웹 프레임워크입니다.
 
