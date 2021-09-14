@@ -126,7 +126,7 @@
 - 이미지 데이터 수집은 구글을 기반으로 연예인의 이름이 저장된 엑셀파일을 불러온후 크롤링을 시행하였습니다. 
 - 추가적으로 부족한 이미지 데이터는 "증명사진" and "여권사진" 검색어를 통해 이미지를 가져왔습니다.
 
-다음은 이미지 데이터 수집을 위해 크롤링한 데이터 예시입니다.
+다음은 이미지 데이터 수집을 위해 크롤링한 코드 예시입니다.
 
 ```python
 
@@ -168,7 +168,7 @@ driver.close() # 창 닫기
 - 이미지 데이터 수집은 구글을 기반으로 연예인의 이름이 저장된 엑셀파일을 불러온후 크롤링을 시행하였습니다. 
 - 추가적으로 부족한 이미지 데이터는 "증명사진" and "여권사진" 검색어를 통해 이미지를 가져왔습니다.
 
-다음은 이미지 데이터 전처리 및 군집화에 대한 데이터 예시입니다.
+다음은 이미지 데이터 전처리 및 군집화에 대한 코드 예시입니다.
 
 ```python
 from sklearn.cluster import KMeans
@@ -181,13 +181,48 @@ clf.fit(man_train_encodings)
 np.unique(clf.labels_)
 ```
 
-#### 3.1.3. 이미지 데이터 군집화
+#### 3.1.3. 이미지 데이터 모델링
 
-* 협업필터링을 잠재 요인 모델을 활용해 구현합니다.
-* 행렬 인수분해 방법은 모든 항목에 독립적인 고유한 표현식을 갖고 있다고 가정하여 가중치가 적용된 각 속성에 대한 사용자의 강도를 합산하여 근사값(잠재 요인)을 구하는 방식입니다.
-* 해당 향수 추천 서비스에서는 향수의 리뷰와 평점을 기반으로 사용자에게 향수를 추천하거나 서비스를 제공합니다.
-* 여러 SVD 중 행렬의 대각원소(특이값) 중 상위 t개만 골라내는 truncated SVD를 사용하였습니다.
-* 행이 향수의 고유Id, 열이 User인 피봇테이블을 생성합니다.
+- 이미지 데이터 수집은 구글을 기반으로 연예인의 이름이 저장된 엑셀파일을 불러온후 크롤링을 시행하였습니다. 
+- 추가적으로 부족한 이미지 데이터는 "증명사진" and "여권사진" 검색어를 통해 이미지를 가져왔습니다.
+
+다음은 이미지 데이터 모델링에 대한 코드 예시입니다.
+
+```python
+import matplotlib.pyplot as plt
+from keras import models
+from keras import layers
+
+model = models.Sequential()
+
+# hidden layer에 합성곱과 맥스 풀링 설정
+model.add(layers.Conv2D(256, (3, 3), activation='relu', input_shape=(150, 150, 3)))
+model.add(layers.MaxPooling2D(2, 2))
+model.add(layers.Conv2D(128, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D(2, 2))
+model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+model.add(layers.MaxPooling2D(2, 2))
+
+
+# 1차원으로 변환
+model.add(layers.Flatten())
+
+# 입력 데이터에 50%의 노드를 무작위로 사용하지 않게 막는다.
+model.add(layers.Dropout(0.5))
+
+# 결과얻기
+# class를 13개로 정하였으므로 softmax 설정
+model.add(layers.Dense(512, activation='relu'))
+model.add(layers.Dense(13, activation='softmax'))
+```
+
+
+
+
+
+
+
+
 
 ![pivot](images/p.png)
 
