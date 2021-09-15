@@ -216,6 +216,17 @@ model.add(layers.Dense(512, activation='relu'))
 model.add(layers.Dense(13, activation='softmax'))
 ```
 
+### 3.2. 텍스트 데이터 
+
+#### 3.2.1. 텍스트 데이터 수집
+
+- 텍스트 데이터 수집은 신한생명 사이트의 사주팔자의 내용을 기반으로 크롤링을 시행하였습니다. 
+
+다음은 텍스트 데이터 수집을 위해 크롤링한 코드 예시입니다.
+
+```python
+```
+
 ## 4. 아키텍처 상세
 
 ![아키텍처 상세](https://user-images.githubusercontent.com/87697789/133373513-891ea78a-582e-484a-a31c-6c02882b48a2.png)
