@@ -218,7 +218,7 @@ model.add(layers.Dense(13, activation='softmax'))
 
 ## 4. 아키텍처 상세
 
-![아키텍처 상세](https://user-images.githubusercontent.com/87697789/133242250-fe683235-7906-481b-800e-9dd2edd0a7d6.png)
+![아키텍처 상세](https://user-images.githubusercontent.com/87697789/133373513-891ea78a-582e-484a-a31c-6c02882b48a2.png)
 
 
 ## 5. 레이아웃 및 디자인
