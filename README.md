@@ -101,7 +101,7 @@
   3. 적은 버그 : 사람(개발자)에 의한 에러 약 40% 감소
   4. 표준 기반 : API에 대한 (완전히 호환되는) 개방형 표준기반
 
-* Mariadb
+* Oracle
 
  <img src="https://user-images.githubusercontent.com/87697789/133231494-29b79afe-c8e4-4c51-a799-bf4d5e948d7d.png" width="30%" height="40%">
  
@@ -113,7 +113,8 @@
 
 ### 2.4. 배포
 
-* AWS EC2
+* AWS EC2 (Server)
+* AWS RDS (DB)
 * Docker
 
 ### 2.4. 프로젝트 관리
