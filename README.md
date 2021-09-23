@@ -316,6 +316,55 @@ for i in range(2):
 다음은 텍스트 데이터 전처리에 대한 코드 예시입니다.
 
 ```python
+ for j in range(21):
+            # 년도
+            year_value = str(1982+j)
+            select_year = Select(driver.find_element_by_name('bYear'))
+            select_year.select_by_value(value=year_value)
+            print(year_value)
+            year_list = list()
+            year_list.append(year_value)
+            년도= pd.DataFrame([year_list],columns=['년도'])
+            년도
+            for k in range(12):
+                # 달
+                month_value = str(1+k)
+                select_month = Select(driver.find_element_by_name('bMonth'))
+                select_month.select_by_value(value=month_value)
+                print(month_value)
+                month_list = list()
+                month_list.append(month_value)
+                월= pd.DataFrame([month_list],columns=['월'])
+                월
+                for l in range(31):
+                    #일
+                    day_value = str(1+l)
+                    select_day = Select(driver.find_element_by_name('bDay'))
+                    select_day.select_by_value(value=day_value)
+                    print(day_value)
+                    day_list = list()
+                    day_list.append(day_value)
+                    일= pd.DataFrame([day_list],columns=['일'])
+                    일
+                    for m in range(13):
+                        #태어난시간
+                        m += 0
+                        select_hour = Select(driver.find_element_by_name('bHour'))
+                        select_hour.select_by_index(index=m)
+                        if m==0:
+                            print("朝子(00:00~01:30)시")
+                            bt = str('朝子(00:00~01:30)시')
+                            bt_list = list()
+                            bt_list.append(bt)
+                            태어난시간= pd.DataFrame([bt_list],columns=['태어난시간'])
+                            태어난시간
+                        if m==1:
+                            print("丑(01:31~03:30)시")
+                            bt = str('丑(01:31~03:30)시')
+                            bt_list = list()
+                            bt_list.append(bt)
+                            태어난시간= pd.DataFrame([bt_list],columns=['태어난시간'])
+                            태어난시간
 ```
 
 ## 4. 아키텍처 상세
