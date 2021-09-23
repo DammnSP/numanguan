@@ -234,6 +234,79 @@ model.add(layers.Dense(13, activation='softmax'))
 다음은 텍스트 데이터 수집을 위해 크롤링한 코드 예시입니다.
 
 ```python
+import requests
+import pandas as pd
+from tqdm import trange
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from selenium.webdriver.support.ui import Select
+import time
+from selenium.webdriver.common.keys import Keys
+import numpy as np
+
+# 드라이버 운용
+driver = webdriver.Chrome(executable_path='C:\sol\chromedriver.exe')
+driver.implicitly_wait(1)
+driver.get('http://shinhan.haezone.com/inSaju.asp?bType=A104&resize=#menuIndex3')
+driver.implicitly_wait(1)
+
+# 신한카드 운세 '내 운명의 배우자' 클릭
+sinhan = driver.find_element_by_css_selector("#wrap > div.top_nav.marT20 > ul > li:nth-child(3) > ul > li:nth-child(5) > a")
+sinhan.click()
+
+time.sleep(3)
+# 빈 데이터프레임 만들어 두기
+df = pd.DataFrame()
+df
+
+# 크롤링 FOR 문
+for i in range(2):
+    # 선택지 if문 -> 성별,년,월,일,태어난시간
+    # 성별 -> 남자
+    if i == 0:
+        print('남자')
+        # 성별 선택자
+        select_sex = Select(driver.find_element_by_name('bSex'))
+        select_sex.select_by_index(index=0)
+        #select.select_by_visible_text(text="option_text")
+        #select.select_by_value(value='고리오')
+        gender = str('남자')
+        gender_list = list()
+        gender_list.append(gender)
+        성별= pd.DataFrame([gender_list],columns=['성별'])
+        성별 
+        
+        # --년 월 일 태어난시간 진행 --
+ 
+        # 텍스트 리스트화
+                        for td in elem1:
+                            row = td.text
+                            row_list1 = row
+                            print(row_list1)
+                            
+                        for td2 in elem2:
+                            row = td2.text
+                            row_list2 = row
+                            print(row_list2)
+
+                        외모_list = list()
+                        외모_list.append(row_list1)
+                        
+                        while '\n' in 외모_list:    
+                                row_list1.remove('\n') # '\n' 삭제
+                                
+                        성격_list = list()
+                        성격_list.append(row_list2)
+                        외모= pd.DataFrame([외모_list],columns=['외모'])
+                        외모
+                        성격= pd.DataFrame([성격_list],columns=['성격'])
+                        성격
+                        # 데이터프레임화
+                        df_result = pd.concat([성별,년도,월,일,태어난시간,외모,성격],axis=1)
+                        df_result
+                        
+                        df_result.to_csv("크롤링자동화test2.csv", mode='a', header=False)
 ```
 
 #### 3.2.2. 텍스트 데이터 전처리
