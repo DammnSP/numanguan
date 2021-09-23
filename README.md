@@ -316,6 +316,7 @@ for i in range(2):
 다음은 텍스트 데이터 전처리에 대한 코드 예시입니다.
 
 ```python
+ # --년 월 일 태어난시간 진행 --
  for j in range(21):
             # 년도
             year_value = str(1982+j)
