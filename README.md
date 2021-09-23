@@ -103,9 +103,10 @@
 
 * Oracle
 
- <img src="https://user-images.githubusercontent.com/87697789/133231494-29b79afe-c8e4-4c51-a799-bf4d5e948d7d.png" width="30%" height="40%">
+ <img src="https://user-images.githubusercontent.com/87697789/134466051-b6fa8dc0-3256-4565-b803-87e3f0f5cf80.png" width="30%" height="40%">
  
- > 오픈 소스의 관계형 데이터베이스 관리 시스템(RDBMS)이다.
+ > 미국 오라클(Oracle)사의 관계형 데이터베이스 관리 시스템의 이름
+ > 현재 유닉스 환경에서 가장 널리 사용되는 RDBMS이며, 업데이트용 언어로는 표준 구조화 조회 언어와 PL/SQL을 지원한다.
 
 ### 2.3. 프론트엔드
 
