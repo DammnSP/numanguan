@@ -320,7 +320,7 @@ for i in range(2):
 
 ## 4. 아키텍처 상세
 
-![아키텍처 상세](https://user-images.githubusercontent.com/87697789/133373513-891ea78a-582e-484a-a31c-6c02882b48a2.png)
+![아키텍처_수정본](https://user-images.githubusercontent.com/87697789/134605443-5b0b065c-4f7f-47ec-ac51-61f9824f6fbf.png)
 
 
 ## 5. 레이아웃 및 디자인
