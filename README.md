@@ -119,7 +119,6 @@
 
 * AWS EC2 (Server)
 * AWS RDS (DB)
-* Docker
 
 ### 2.4. 프로젝트 관리
 
