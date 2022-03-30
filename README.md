@@ -49,7 +49,8 @@
 ### 2.1. 데이터 수집 및 처리
 
 * Selenium      BeatifulSoup      Keras
-<img src = "https://user-images.githubusercontent.com/58734611/160864074-463f93d8-dd61-4dc8-89e1-86ec20279551.png" width="30%" height="40%">    <img src = "https://user-images.githubusercontent.com/58734611/160864398-00cd9de2-2daa-44db-b5a5-83d98c3492ad.png" width="30%" height="40%">   <img src = "https://user-images.githubusercontent.com/58734611/160864529-86c3bc81-cf5a-4bb7-9dd7-4b060544b41c.png" width="30%" height="40%">
+
+<img src = "https://user-images.githubusercontent.com/58734611/160864074-463f93d8-dd61-4dc8-89e1-86ec20279551.png" width="10%" height="10%">    <img src = "https://user-images.githubusercontent.com/58734611/160864398-00cd9de2-2daa-44db-b5a5-83d98c3492ad.png" width="30%" height="40%">   <img src = "https://user-images.githubusercontent.com/58734611/160864529-86c3bc81-cf5a-4bb7-9dd7-4b060544b41c.png" width="30%" height="40%">
 
 * OpenCV : land mark 얼굴요소
 <img src = "https://user-images.githubusercontent.com/58734611/160864715-b7a898d1-8dbd-4236-a8ff-e609a56f8202.png" width="30%" height="40%">
