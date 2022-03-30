@@ -107,7 +107,7 @@
 
 ## 4. 아키텍처 상세
 
-![아키텍처_수정본](https://user-images.githubusercontent.com/87697789/134605443-5b0b065c-4f7f-47ec-ac51-61f9824f6fbf.png)
+![아키텍처_수정본](https://user-images.githubusercontent.com/58734611/160886339-9c220219-330c-4287-b186-7377961711ad.png)
 
 
 ## 5. 레이아웃 및 디자인
