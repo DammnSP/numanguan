@@ -112,4 +112,4 @@
 
 ## 5. 레이아웃 및 디자인
 
-<img src="https://user-images.githubusercontent.com/58734611/160872234-fa2d2587-c0db-4370-be5f-af811e3a78a9.png">  <img src="https://user-images.githubusercontent.com/58734611/160872386-2ce388d0-3082-4de0-8214-45d830cf703b.png">
+<img src="https://user-images.githubusercontent.com/58734611/160872234-fa2d2587-c0db-4370-be5f-af811e3a78a9.png">           <img src="https://user-images.githubusercontent.com/58734611/160872386-2ce388d0-3082-4de0-8214-45d830cf703b.png">
