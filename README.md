@@ -82,7 +82,7 @@
 
 * GitHub | Google driver
 
- <img src="https://user-images.githubusercontent.com/58734611/160869906-11765d0b-991d-4e47-a6db-ff5c4edc8578.png" width="30%" height="40%"> <img src="https://user-images.githubusercontent.com/58734611/160869977-ba6de438-0fa2-47bd-a5ee-61ba4ac92ec6.png" width="30%" height="40%">
+ <img src="https://user-images.githubusercontent.com/58734611/160869906-11765d0b-991d-4e47-a6db-ff5c4edc8578.png" width="30%" height="40%"> <img src="https://user-images.githubusercontent.com/58734611/160869977-ba6de438-0fa2-47bd-a5ee-61ba4ac92ec6.png" width="30%" height="50%">
  
 ## 3. 데이터 분석 과정
 
